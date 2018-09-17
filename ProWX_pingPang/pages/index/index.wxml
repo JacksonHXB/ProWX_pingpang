@@ -1,0 +1,90 @@
+<view class="indexHeader">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+        <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="swiper_img" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="indexBody1">
+    <view class="bodyHeader">
+        <text class="bh_item1">热门活动</text>
+        <text class="bh_item2" bindtap="toMeeting">更多>></text>
+    </view>
+    <view class="hotActivity">
+        <view class="activity">
+            <view class="activity-item" wx:for="{{hotActivites}}" wx:key="{{hotActivites}}">
+                <view class="item-title">{{item["title"]}}</view>
+                <view class="item-time">{{item["publishTime"]}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="indexBody1">
+    <view class="bodyHeader">
+        <text class="bh_item1">交易市场</text>
+        <text class="bh_item2">更多>></text>
+    </view>
+    <view class="tradeMarket">
+        <view class="tradeLeft">
+            <image src="../../images/index1.png"></image>
+            <text>精品直拍180.00￥</text>
+        </view>
+        <view class="tradeRight">
+            <text>优惠交易品</text>
+            <view class="rightImgs">
+                <view class="rightImg1">
+                    <image class="itemImg1" src="../../images/index2.png"></image>
+                    <text>78.00￥</text>
+                </view>
+                <view class="rightImg2">
+                    <image class="itemImg2" src="../../images/index3.png"></image>
+                    <text>80.00￥</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="indexBody1">
+    <view class="bodyHeader">
+        <text class="bh_item1">个人组团</text>
+        <text class="bh_item2">更多>></text>
+    </view>
+    <view class="hotActivity">
+        <view class="activity">
+            <view class="activity-item" wx:for="{{personGroups}}" wx:key="{{personGroups}}">
+                <view class="item-title">{{item["title"]}}</view>
+                <view class="item-time">{{item["publishTime"]}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="indexBody1">
+    <view class="bodyHeader">
+        <text class="bh_item1">热点资讯</text>
+        <text class="bh_item2">更多>></text>
+    </view>
+    <view class="hotActivity">
+        <view class="activity">
+            <view class="activity-item" wx:for="{{personGroups}}" wx:key="{{personGroups}}">
+                <view class="item-title">{{item["title"]}}</view>
+                <view class="item-time">{{item["time"]}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="indexBody1">
+    <view class="bodyHeader">
+        <text class="bh_item1">乒乓学堂</text>
+        <text class="bh_item2">更多>></text>
+    </view>
+    <view class="hotActivity">
+        <view class="activity">
+            <view class="activity-item" wx:for="{{personGroups}}" wx:key="{{personGroups}}">
+                <view class="item-title">{{item["title"]}}</view>
+                <view class="item-time">{{item["time"]}}</view>
+            </view>
+        </view>
+    </view>
+</view>

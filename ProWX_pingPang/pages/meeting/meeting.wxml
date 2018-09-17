@@ -1,0 +1,98 @@
+<view class="body">
+    <view class="meetingHeader">
+        <view wx:if="{{userAddress}}">
+            <view class="myAddress" bindtap="setMyAddress">我的位置: {{userAddress}}</view>
+        </view>
+        <view wx:else>
+            <view class="myAddress">未定位</view>
+        </view>
+    </view>
+
+    <view class="meetingTool">
+        <view wx:for="{{meetingItems}}" wx:key="{{meetingItems}}">
+            <view class="meetingItem" bindtap="toPublishGroup">
+                <image class="toolImg" src="../../images/tool.png"></image>
+                <text>约球</text>
+            </view>
+        </view>
+    </view>
+    <view class="mettingMap">
+        
+        <map longitude='{{userLongitude}}' latitude='{{userLatitude}}' show-location></map>
+        
+        <!--
+        <view style="border: 1px solid black; width: 100%; height: 100%;"></view>
+        -->
+    </view>
+    <view class="meetingMain">
+        <view class="mainHeader">
+            <view class="headerLeft">
+                <view wx:if="{{showFlag}}">
+                    <text class="noSelected" bindtap="personGroupsClick">个人组团</text>
+                    <text class="selected">热门活动</text>
+                </view>
+                <view wx:else>
+                    <text class="selected">个人组团</text>
+                    <text class="noSelected" bindtap="hotActivitesClick">热门活动</text>
+                </view>
+            </view>
+            <text class="headerRight" bindtap="filter">筛选</text>
+        </view>
+        <view class="mainBody">
+            <view wx:if="{{showFlag}}" wx:key="{{showFlag}}">
+                <!-- 热门活动 -->
+                <view wx:for="{{activityList}}" wx:key="{{activityList}}">
+                    <view class="hotActivityItem">
+                        <view class="activityLeft">
+                            <image src="../../images/index2.png"></image>
+                        </view>
+                        <view class="activityRight">
+                            <text class="activityFirst">{{item["title"]}}</text>
+                            <text class="activitySecond">活动人数：{{item["scope"]}}</text>
+                            <text class="activityThird">活动时间：{{item["activityTime"]}}</text>
+                        </view>
+                        <view class="activityBottom">
+                            <text>活动简介：</text>
+                            <text class="bottomSecond">{{item["introduce"]}}</text>
+                            <text>活动地点：</text>
+                            <text class="bottomFifth">{{item["addr"]}}</text>
+                            <text class="bottomLast">{{item["publishTime"]}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:else>
+                <!-- 个人组团 -->
+                <view wx:for="{{personGroupList}}" wx:key="{{personGroupList}}">
+                    <view class="personGroupItem" bindtap="personGroupClick" data-id="{{item['id']}}">
+                        <view class="personLeft">
+                            <image src="../../images/index2.png"></image>
+                        </view>
+                        <view class="personRight">
+                            <text class="personRightFirst">{{item["nickname"]}}</text>
+                            <text class="personRightSecond">{{item["title"]}}</text>
+                            <text class="personRightThrid">地址：{{item["groupAddr"]}}</text>
+                            <text class="personRightLast">{{item["publishTime"]}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--筛选面板-->
+<modal hidden="{{hiddenmodalput}}" title="筛选条件" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">
+    <view>
+        <label>根据地区：</label>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+        </picker>
+    </view>
+    <view>
+        <label>根据时间：</label>
+        <button>时间升序</button>
+        <button>时间降序</button>
+    </view>
+</modal>

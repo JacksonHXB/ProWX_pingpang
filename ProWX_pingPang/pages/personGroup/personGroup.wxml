@@ -1,0 +1,34 @@
+<view class="body">
+    <view class="groupHeader">
+        <view wx:if="{{userAddress}}">
+            <view class="myAddress" bindtap="setMyAddress">我的位置: {{userAddress}}</view>
+        </view>
+        <view wx:else>
+            <view class="myAddress">未定位</view>
+        </view>
+    </view>
+    <view class="groupIntroduce">
+        <view class="introduceTop">
+            <image src="../../images/index2.png"></image>
+            <view class="topRight">
+                <text>发起人：{{groupInfo["groupUser"]}}</text>
+                <text>性别：{{groupInfo["userGender"]}}</text>
+                <text>球龄：{{groupInfo["userLevel"]}}</text>
+                <text>邀请人数：{{groupInfo["inviteNum"]}} 人     已报名人数：{{groupInfo["signNum"]}} 人</text>
+            </view>
+        </view>
+        <view class="introduceBottom">
+            <text>时间：{{groupInfo["exerciseTime"]}}</text>
+            <text>地点：{{groupInfo["groupAddr"]}}</text>
+            <view>
+                <text>发起内容：</text>
+                <text>{{groupInfo["groupContent"]}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="groupMap">显示用户位置及组团地点的位置</view>
+    <view class="groupComment">
+        <button bindtap="test2">测试2</button>
+        <input placeholder="请输入内容" auto-focus='true' bindconfirm='' bindinput="test"/>
+    </view>
+</view>

@@ -1,0 +1,262 @@
+.body {
+    width: 96%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meetingHeader {
+    width: 96%;
+    padding: 5rpx;
+    border: 1px solid rgb(179, 178, 178);
+    border-radius: 5%;
+}
+
+.meetingTool {
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: flex-start;
+    width: 99%;
+    flex-wrap: wrap;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 2%;
+}
+.myAddress {
+    font-size: 12px;
+}
+
+.toolImg {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 10%;
+}
+
+.meetingItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    padding: 10px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.mettingMap {
+    width: 100%;
+    height: 130px;
+}
+
+map {
+    width: 100%;
+    height: 100%;
+}
+
+.meetingMain {
+    clear: both;
+    width: 100%;
+    height: auto;
+    margin-top: 10rpx;
+}
+
+.mainHeader {
+    clear: both;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10rpx;
+}
+
+.mainBody {
+    width: 100%;
+    height: auto;
+}
+
+.selected {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.noSelected {
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 12px;
+}
+.headerRight{
+    font-size: 15px;
+}
+.personGroupItem{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.personLeft{
+    width:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.personLeft image{
+    width: 110px;
+    height: 110px;
+    border-radius: 3px;    
+}
+.personRight{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    position: relative;
+    padding-top:10px;
+    padding-bottom: 5px;
+}
+.personRight text{
+    padding-bottom: 5px;
+}
+.personRightSecond{
+    padding: 8px;
+    font-size:15px;
+    height:50px;
+}
+.personRightThrid{
+    font-size:14px;
+}
+.personRightLast{
+    font-size:14px;
+    text-align: right;
+    color: grey;
+}
+.hotActivityItem{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 10px;
+    font-size: 16px;
+}
+.activityLeft{
+    width: 40%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activityRight{
+    width: 60%;
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.activityRight text{
+    padding-bottom: 5px;
+}
+.activityFirst{
+    font-weight: bold;
+}
+.activityLeft image{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;   
+}
+.activityBottom{
+    clear:both;
+    display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+    padding-left: 13px;
+    position: relative;
+}
+.bottomSecond{
+    padding-left: 10px;
+}
+.bottomFifth{
+    padding-left: 10px;
+}
+.bottomLast{
+    color: grey;
+    padding-left: 200px;
+    width: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    height: 600rpx;
+    width: 100%;
+    background-color: rebeccapurple;
+    display: flex; /*使用Flex布局*/
+    flex-direction: row; /*设置主轴（默认主轴是y轴，默认是row）*/
+    flex-wrap: wrap; /*flex-wrap默认是nowrap不换行的，wrap是换行的，wrap-reverse换行翻转*/
+    flex-flow: row wrap; /*flex-flow是flex-direction与flex-wrap的简写*/
+    justify-content: center; /*在主轴上居中对齐，flex-start是居左对齐，flex-end是居右对齐，space-around平均对齐, space-between*/
+    align-items: center; /*在交叉轴上的对齐方式，stretch是在交叉轴上100%自动填充,还有baseline*/
+}
+
+.item {
+    width: 100rpx;
+    height: 100rpx;
+    background: rosybrown;
+    border: 1px solid #fff;
+    text-align: center;
+    flex-grow: 0; /*当有多余空间的时候，元素占据的比例，默认值是0*/
+    flex-shrink: 1; /*当没有多余空间的时候，元素缩小的比例，默认值是1*/
+    flex: 0 1 50px; /*是flex-grow,flex-shrink,flex-basis的简写*/
+    order: 3; /*排列的优先级*/
+}
+
+.i3 {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 150px; /*元素在主轴上的占据空间*/
+    align-self: flex-end; /*定义元素自身的排列方式*/
+}
