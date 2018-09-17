@@ -37,16 +37,34 @@ Page({
             }
         })
     },
-    toMeeting: function(){
-        wx.redirectTo({
-            url: '../meeting/meeting',
-        })
-    },
     onLoad: function(){
         //初始化热门活动
         this.getHotActivties()
         //初始化个人组团
         this.getPersonGroups()
+    },
+    //点击单个个人组团
+    groupDetailClick: function(e){
+        var groupId = e.currentTarget.dataset.id    //获取ID值
+        //设置缓存的groupID为当前这个个人组团的ID
+        wx.setStorageSync("personGroupId", groupId)
+        //进入个人组团详情页面
+        wx.navigateTo({
+            url: '../personGroup/personGroup',
+        })
+    },
+    //个人组团更多
+    groupMoreClick: function(){
+        //跳转到底栏时，这里访问接口使用wx.switchTab
+        wx.switchTab({
+            url: '../meeting/meeting',
+        })
+    },
+    //热门活动更多【有BUG】
+    activityMoreClick:function(){
+        wx.switchTab({
+            url: '../meeting/meeting',
+        })
     }
 })
 

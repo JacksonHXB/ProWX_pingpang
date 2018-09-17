@@ -144,6 +144,14 @@ Page({
             url: '/pages/personGroup/personGroup',
         })
     },
+    //点击热门活动对象
+    activityClick: function(e) {
+        var personGroupId = e.currentTarget.dataset.id          //获取需要传递的ID
+        wx.setStorageSync("activityId", personGroupId)          //将ID存入到本地内存中
+        wx.navigateTo({                                         //跳转到个人活动详情页面
+            url: '/pages/activity/activity',
+        })
+    },
     //发布约球
     toPublishGroup: function(){
         wx.navigateTo({                                         

@@ -4,6 +4,7 @@
         "pages/publishGroup/publishGroup",
         "pages/meeting/meeting",
         "pages/personGroup/personGroup",
+        "pages/activity/activity",
         "pages/mine/mine",
         "pages/logs/logs"
     ],

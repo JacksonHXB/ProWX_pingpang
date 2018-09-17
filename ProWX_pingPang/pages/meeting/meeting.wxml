@@ -42,7 +42,7 @@
             <view wx:if="{{showFlag}}" wx:key="{{showFlag}}">
                 <!-- 热门活动 -->
                 <view wx:for="{{activityList}}" wx:key="{{activityList}}">
-                    <view class="hotActivityItem">
+                    <view class="hotActivityItem" bindtap="activityClick" data-id="{{item['id']}}">
                         <view class="activityLeft">
                             <image src="../../images/index2.png"></image>
                         </view>

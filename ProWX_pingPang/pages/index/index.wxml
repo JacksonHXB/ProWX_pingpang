@@ -10,7 +10,7 @@
 <view class="indexBody1">
     <view class="bodyHeader">
         <text class="bh_item1">热门活动</text>
-        <text class="bh_item2" bindtap="toMeeting">更多>></text>
+        <text class="bh_item2" bindtap="activityMoreClick">更多>></text>
     </view>
     <view class="hotActivity">
         <view class="activity">
@@ -49,11 +49,11 @@
 <view class="indexBody1">
     <view class="bodyHeader">
         <text class="bh_item1">个人组团</text>
-        <text class="bh_item2">更多>></text>
+        <text class="bh_item2" bindtap="groupMoreClick">更多>></text>
     </view>
     <view class="hotActivity">
         <view class="activity">
-            <view class="activity-item" wx:for="{{personGroups}}" wx:key="{{personGroups}}">
+            <view class="activity-item" bindtap="groupDetailClick" data-id="{{item['id']}}" wx:for="{{personGroups}}" wx:key="{{personGroups}}">
                 <view class="item-title">{{item["title"]}}</view>
                 <view class="item-time">{{item["publishTime"]}}</view>
             </view>
