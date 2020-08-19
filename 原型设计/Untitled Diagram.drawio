@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-19T02:46:23.478Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="rY1wFLOfx3rV01rocQGV" version="13.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-19T02:47:34.611Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="WrMJfYKdD_k_xcivBJSr" version="13.6.3" type="github">
   <diagram id="xe2EZ2GwES0Xyn4Nyha4" name="Page-1">
     <mxGraphModel dx="1420" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -43,6 +43,9 @@
         </mxCell>
         <mxCell id="eCLSL6v3wM5iip2mO3SQ-12" value="活动报名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="320" y="240" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FGLPS5DEvnb7Qo5zSPxL-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
